@@ -27,7 +27,12 @@ class LogWriterDispatcher
      */
     public function getChannels()
     {
-        return \Config::get('bow-logger.channels',[]);
+        $configChannels = config('bow.log.channels');
+
+        if (count($configChannels) <= 0 ) {
+            Log::debug('bow.log.channels is not configured');
+        }
+        return $configChannels;
     }
 
     /**

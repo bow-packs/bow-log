@@ -8,27 +8,14 @@
 
 namespace Bow\Log;
 
-use Bow\Log\LogWriterDispatcher;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Log;
+
 
 /**
  * Class LogServiceProvider
  */
 class LogServiceProvider extends ServiceProvider
 {
-    /**
-     * boot Provider and check for existing config
-     */
-    public function boot() {
-
-        $configChannels = config('bow.log.channels');
-
-        if (count($configChannels) <= 0 ) {
-            Log::debug('bow.log.channels is not configured');
-        }
-    }
-
     /**
      * register 'bowlog' LogWriterDispatcher as ServiceProvider
      * @see Bow\Log\LogWriterDispatcher
