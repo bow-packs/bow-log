@@ -1,0 +1,21 @@
+{
+    "name": "bow/log",
+    "description": "Laravel5-Wrapper to monolog for use with monologs multichannel feature",
+    "keywords": ["laravel","monolog","logging"],
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Michael Behr",
+          "email": "m.behr@inf-tek.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bow\\Log\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "5.1.*",
+        "monolog/monolog": "1.17.*"
+    }
+}
