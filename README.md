@@ -3,7 +3,7 @@ Laravel5-Wrapper to monolog for use with monologs multichannel feature
 
 ##Installation
 
-```composer require bow/log```
+```composer require bow/log:dev-master```
 
 Add to config/app.php
 
